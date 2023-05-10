@@ -3,78 +3,52 @@
 	margin: 0;
 	padding: 0;
 }
-
-.mouse {
-	width: 30px;
-	height: 60px;
-	border: 3px solid #FFF;
-	border-radius: 60px;
-	position: relative;
-	opacity: .4;
+ 
+.arrows {
+ width: 60px;
+ height: 72px;
+ position: absolute;
+ left: 50%;
+ margin-left: -30px;
+ bottom: 20px;
+ transform: scale(0.8);
 }
 
-.mouse::before {
-    content: '';
-    width: 12px;
-    height: 12px;
-    position: absolute;
-    top: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #FFF;
-    border-radius: 50%;
-    opacity: 1;
-    animation: wheel 2s infinite;
-    -webkit-animation: wheel 2s infinite;
+.arrows path {
+ stroke: #0563BB;
+ fill: transparent;
+ stroke-width: 1px;	
+ animation: arrow 2s infinite;
+ -webkit-animation: arrow 2s infinite; 
+}
+  
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
 }
 
-@keyframes wheel {
-	to {
-		opacity: .1;
-		top: 40px;
-	}
+@-webkit-keyframes arrow 
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
 }
 
-@-webkit-keyframes wheel {
-	to {
-		opacity: 0;
-		top: 60px;
-	}
+.arrows path.a1 {	  
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s;
 }
 
-.mouse-fade-out {
-	animation: opacityChange .5s;
+.arrows path.a2 {	  
+	animation-delay:-0.5s;	  
+	-webkit-animation-delay:-0.5s;
 }
 
-.mouse-fade-in {
-	animation: opacityRestore .5s;
-}
-
-.mouse-hide {
-	display: none;
-}
-
-.opacity_0 {
-	opacity: 0;
-}
-
-
-@keyframes opacityChange {
-	from {
-		opacity: .5;
-	}
-
-	to {
-		opacity: 0;
-	}	
-}
-
-@keyframes opacityRestore {
-	from {
-		opacity: 0;
-	}
-
-	to {
-		opacity: .5;
-	}	
+.arrows path.a3 {		  
+	animation-delay:0s;	  
+	-webkit-animation-delay:0s;
 }

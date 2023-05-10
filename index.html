@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="styles/scroll_down.css">
 		<link rel="stylesheet" href="styles/style.css" />
 	</head>
+	
 	<body>
 		<div class="container">
 			<nav class="nav-desktop">
@@ -93,14 +94,14 @@
 
 				<div class="nav-mobile--content" id="menu-mobile">
 					<ul>
-						<li>
+						<li class="mobile-active">
 							<a href="#Strona_główna" value="1">
 								<div class="ico-bg">
-									<svg viewBox="0 0 16 16" alt="Strona główna" class="nav-img-desktop">
+									<svg viewBox="0 0 16 16" alt="Strona główna" class="nav-img-desktop mobile-active">
 										<path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
 									</svg>
 								</div>
-								<h3 class="section-name-nav">Strona główna</h3>
+								<h3 class="section-name-nav mobile-active">Strona główna</h3>
 							</a>
 						</li>
 						<li>
@@ -161,7 +162,7 @@
 		</div>
 
 		<header>
-			<section class="main" id="Strona_główna" value="Strona główna">
+			<section class="main" id="Strona_główna" value="1">
 			<div class="container">
 				<h1 class="author-name">Mateusz Bogdan</h1>
 				<h2 id="job-name">Graphic Designer & Web Developer</h2>
@@ -185,10 +186,15 @@
 				<a href="#" class="download-btn">Pobierz CV</a>
 			</div>
 			</section>
+			<svg class="arrows">
+				<path class="a1" d="M0 0 L30 32 L60 0"></path>
+				<path class="a2" d="M0 20 L30 52 L60 20"></path>
+				<path class="a3" d="M0 40 L30 72 L60 40"></path>
+			</svg>
 		</header>
 
 		<main>
-			<section class="about" id="O_mnie" value="O mnie">
+			<section class="about" id="O_mnie" value="2">
 				<div class="container">
 					<h3 class="section-heading">O MNIE</h3>
 					<div class="section-wrapper">
@@ -258,7 +264,7 @@
 				</div>
 			</section>
 
-			<section class="skills" id="Umiejętności" value="Umiejętności">
+			<section class="skills" id="Umiejętności" value="3">
 				<div class="container">
 					<h3 class="section-heading">UMIEJĘTNOŚCI</h3>
 					<div class="section-wrapper">
@@ -371,7 +377,7 @@
 				</div>
 			</section>
 
-			<section class="doswiadczenie" id="Doświadczenie" value="Doświadczenie">
+			<section class="doswiadczenie" id="Doświadczenie" value="4">
 				<div class="container">
 					<h3 class="section-heading">DOŚWIADCZENIE</h3>
 					<div class="section-wrapper">
@@ -403,7 +409,7 @@
 											<b>Kierunek: </b>Technik grafiki i poligrafii cyfrowej
 										</p>
 										<p class="education-description"> 
-											Szerokie umiejętności w zakresie projektowania graficznego i produkcji poligraficznej. Praktyczna wiedzę z obszaru tworzenia i edycji grafiki cyfrowej, a także umiejętności z zakresu przygotowania projektów do druku. 
+											Szerokie umiejętności w zakresie projektowania graficznego i produkcji poligraficznej. Praktyczna wiedza z obszaru tworzenia i edycji grafiki cyfrowej, a także umiejętności z zakresu przygotowania projektów do druku i obróbki introligatorskiej. 
 										</p>
 									</div>
 								</div>
@@ -438,6 +444,35 @@
 												<path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
 											</svg>
 											Kierowca kat. B.
+										</p>
+									</div>
+									<div class="one-education">
+										<h5>PRAKTYKA W FIRMIE ,,IdeaGraf"</h5>
+										<svg height="20" width="20" class="circle">
+											<circle cx="10" cy="10" r="8" stroke="#0563BB" stroke-width="2" fill="white" />
+										</svg>
+										<div class="education-years">17.01.2022 - 11.02.2022</div>
+										<div class="education-years">01.03.2021 - 26.03.2021</div>
+										<p class="education-description">
+											<b>Zakres obowiązków:</b>
+										</p>
+										<p class="duties-description"> 
+											<svg class="chevron-right" viewBox="0 0 16 16">
+												<path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+											</svg>
+											Tworzenie projektów graficznych.
+										</p>
+										<p class="duties-description"> 
+											<svg class="chevron-right" viewBox="0 0 16 16">
+												<path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+											</svg>
+											Obsługa narzędzi graficznych takich jak Adobe Photoshop, Illustrator, InDesign.
+										</p>
+										<p class="duties-description"> 
+											<svg class="chevron-right" viewBox="0 0 16 16">
+												<path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+											</svg>
+											Obsługa maszyn poligraficznych takich jak ploter tnący, gilotyna, bigówka, bindownica.
 										</p>
 									</div>
 									<div class="one-education">
@@ -516,7 +551,7 @@
 				</div>
 			</section>
 
-			<section class="portfolio" id="Portfolio" value="Portfolio">
+			<section class="portfolio" id="Portfolio" value="5">
 				<div class="container">
 					<h3 class="section-heading">PORTFOLIO</h3>
 					<div class="portfolio-pop-up-bg hidden">
@@ -609,7 +644,7 @@
 				</div>
 			</section>
 
-			<section class="kontakt" id="Kontakt" value="Kontakt">
+			<section class="kontakt" id="Kontakt" value="6">
 				<div class="container">
 					<h3 class="section-heading">KONTAKT</h3>
 					<div class="section-wrapper">
