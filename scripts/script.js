@@ -134,12 +134,15 @@ const hideGallery = () => {
     setTimeout( () => {
         GALLERY_PREVIEW.classList.remove("fade-out");
     }, 200);
+
+    document.querySelector("body").setAttribute("style", "overflow-y: none")
 };
 
 THUMBNAILS.forEach((thumbnail, index) => {
     const showGallery = (e) => {
         GALLERY_PREVIEW.classList.remove("hidden");
         IMG_OPENED.src = e.target.src;
+        document.querySelector("body").setAttribute("style", "overflow-y: hidden")
     };
 
     thumbnail.addEventListener("click", showGallery);
