@@ -118,7 +118,7 @@ section {
 
 .nav-desktop  .nav-img-desktop {
 	width: 30px;
-	fill: #000;
+	fill: var(--gray);
 }
 
 .nav-desktop  .section-name-nav {
@@ -272,12 +272,12 @@ section {
 
 .nav-mobile--content .nav-img-desktop {
 	width: 30px;
-	fill: #000;
+	fill: var(--gray);
 }
 
 .nav-mobile .section-name-nav {
 	display: block;
-	color: #000;
+	color: var(--gray);
 }
 
 .mobile-active {
