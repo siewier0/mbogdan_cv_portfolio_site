@@ -93,7 +93,8 @@ section {
 	top: 50%;
 	transform: translate(0, -50%);
 	z-index: 100;
-	animation: navFadeIn 1s ease-in-out;
+	opacity: 0;
+	animation: navFadeIn 1s ease-in-out 1 2.6s;
 }
 
 @keyframes navFadeIn {
@@ -209,6 +210,20 @@ section {
 	right: 0;
 	display: none;
 	z-index: 2001;
+	opacity: 0;
+	animation: slideInOpacityUp .8s ease-in-out 1 2600ms;
+}
+
+@keyframes slideInOpacityUp {
+    from {
+        transform: translateX(200%);
+		opacity: 0;
+    }
+
+    to {
+        transform: translateX(0%);
+		opacity: 1;
+    }
 }
 
 #menu-mobile {
@@ -318,7 +333,7 @@ header {
 .arrows {
 	position: absolute;
 	left: 50%;
-	bottom: 10%;
+	bottom: 15%;
 }
 
 .main {
@@ -332,22 +347,11 @@ header .container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	animation: HeroFadeIn .8s ease-in-out;
-}
-
-@keyframes HeroFadeIn {
-    from {
-        opacity: 0;
-		transform: translate(0, 30%);
-    }
-
-    to {
-        opacity: 1;
-    }
 }
 
 .arrows {
-	animation: HeroFadeIn .8s ease-in-out;
+	opacity: 0;
+	animation: showFromDown .8s ease-in-out 1 2600ms;
 }
 
 .author-name {
@@ -355,6 +359,19 @@ header .container {
 	color: var(--gray);
 	position: relative;
 	line-height: 1.1;
+	animation: showFromDown .8s ease-in-out 1;
+}
+
+@keyframes showFromDown {
+	from {
+		transform: translateY(4rem);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
 	
 }
 
@@ -363,6 +380,25 @@ header .container {
 	font-weight: 500;
 	color: var(--primary);
 	font-size: 1.75rem;
+	opacity: 0;
+	animation: showFromUp .8s ease-in-out 1 800ms;
+}
+
+.opacity-1 {
+	opacity: 1 !important;
+}
+
+@keyframes showFromUp {
+	from {
+		transform: translateY(-2.5rem);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	
 }
 
 .hero-socials {
@@ -370,6 +406,8 @@ header .container {
 	align-items: center;
 	gap: 30px;
 	margin-top: 20px;
+	opacity: 0;
+	animation: showFromDown .8s ease-in-out 1 1600ms;
 }
 
 .social-icons {
@@ -401,6 +439,8 @@ header .container {
 	transition: border .2s ease-in-out,
 				background-color .2s ease-in-out,
 				color .2s ease-in-out;
+	opacity: 0;
+	animation: showFromDown .8s ease-in-out 1 1800ms;
 }
 
 .download-btn:hover {
@@ -617,7 +657,8 @@ header .container {
 }
 
 .skills-ico-one-group .technology-name {
-	margin: 0; 
+	margin: 0;
+	font-weight: 500;
 }
 
 /* SKILLS - MEDIA QUERIES */
@@ -759,7 +800,7 @@ header .container {
 }
 
 .portfolio-grid img:hover {
-	transform: scale(1.075);
+	transform: scale(1.05);
 	filter: brightness(60%);
 }
 
@@ -802,9 +843,8 @@ header .container {
 .portfolio-pop-up {
     height: 100%;
     max-width: 1920px;
-    position: relative;
     display: flex;
-    align-itmes: center;	
+    align-items: center;	
     padding: 25px 0;
 }
 
@@ -822,6 +862,13 @@ header .container {
 	align-items: center;
 }
 
+#img-opened {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+	position: relative;
+}
+
 #x-close {
     height: 50px;
     filter: invert();
@@ -834,12 +881,6 @@ header .container {
 
 #x-close:active {
     scale: .9;
-}
-
-#img-opened {
-    max-width: 100%;
-    max-height: 92.5%;
-    object-fit: contain;
 }
 
 /* PORTFOLIO - MEDIA QUERIES */
@@ -937,4 +978,17 @@ footer {
 	.footer-author {
 		font-size: 1.6rem;
 	}
+}
+
+
+/* Animations */
+.reveal {
+	position: relative;
+	transform: translateY(150px);
+	opacity: 0;
+	transition: all .5s ease;
+}
+.reveal-active {
+	transform: translateY(0);
+	opacity: 1;
 }

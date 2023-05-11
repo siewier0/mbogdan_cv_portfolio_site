@@ -155,3 +155,52 @@ GALLERY_PREVIEW.addEventListener("click", (e) => {
         hideGallery();
     }
 });
+
+
+// Animations
+function reveal() {
+    const reveals = document.querySelectorAll(".reveal");
+    for (i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const elementTop = reveals[i].getBoundingClientRect().top;
+      const elementVisible = 100;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("reveal-active");
+      } else {
+        reveals[i].classList.remove("reveal-active");
+      }
+    }
+  }
+
+window.addEventListener("scroll", reveal)
+
+
+const JOB_NAME = document.querySelector("#job-name");
+const HERO_SCOAILS = document.querySelector(".hero-socials");
+const BUTTON_DOWNLOAD = document.querySelector(".download-btn")
+const NAV_DESKTOP = document.querySelector(".nav-desktop")
+const ARROWS_HINT = document.querySelector(".arrows")
+
+setTimeout( () => {
+    JOB_NAME.classList.add("opacity-1");
+}, 1600);
+
+setTimeout( () => {
+    HERO_SCOAILS.classList.add("opacity-1");
+}, 2400);
+
+setTimeout( () => {
+    BUTTON_DOWNLOAD.classList.add("opacity-1");
+}, 2600);
+
+setTimeout( () => {
+    ARROWS_HINT.classList.add("opacity-1");
+}, 3400);
+
+setTimeout( () => {
+    HAMBURGER.classList.add("opacity-1");
+}, 3400);
+
+setTimeout( () => {
+    NAV_DESKTOP.classList.add("opacity-1");
+}, 3600);
