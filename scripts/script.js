@@ -141,9 +141,9 @@ const hideGallery = () => {
 THUMBNAILS.forEach((thumbnail, index) => {
     const showGallery = (e) => {
         GALLERY_PREVIEW.classList.remove("hidden");
-        imgNumber = e.target.src;
+        let imgNumber = e.target.src;
         imgNumber = imgNumber.substring(imgNumber.length - 6);
-        source = "assets/portfolio/portfolio_" + imgNumber;
+        let source = "assets/portfolio/portfolio_" + imgNumber;
         IMG_OPENED.src = source;
         document.querySelector("body").setAttribute("style", "overflow-y: hidden")
     };
