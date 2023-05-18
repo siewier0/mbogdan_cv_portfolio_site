@@ -145,7 +145,14 @@ THUMBNAILS.forEach((thumbnail, index) => {
         imgNumber = imgNumber.substring(imgNumber.length - 6);
         let source = "assets/portfolio/portfolio_" + imgNumber;
         IMG_OPENED.src = source;
+        document.querySelector(".loader-spinner").setAttribute("style", "opacity: 1")
+        IMG_OPENED.setAttribute("style", "opacity: 0")
         document.querySelector("body").setAttribute("style", "overflow-y: hidden")
+
+        IMG_OPENED.onload = function() {
+            document.querySelector(".loader-spinner").setAttribute("style", "opacity: 0")
+            IMG_OPENED.setAttribute("style", "opacity: 1")
+        }
     };
 
     thumbnail.addEventListener("click", showGallery);

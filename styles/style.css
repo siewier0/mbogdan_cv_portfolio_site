@@ -862,6 +862,27 @@ header .container {
 	align-items: center;
 }
 
+.loader-spinner {
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	border: 8px solid var(--gray-lightest);
+	border-top: 8px solid var(--primary);
+	border-radius: 50%;
+	z-index: 1;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
 #img-opened {
     max-width: 100%;
     max-height: 100%;
@@ -872,7 +893,7 @@ header .container {
 #x-close {
     height: 50px;
     filter: invert();
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
     cursor: pointer;
